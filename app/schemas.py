@@ -6,11 +6,16 @@ class CardCreate(BaseModel):
     rarity: str
     market_price: float
 
+    model_config = {
+        'from_attributes': True
+    }
+
 class CardOut(BaseModel):
     id: str
     name: str
     rarity: str
     market_price: float
 
-    class Config:
-        orm_mode = True
+    model_config = {
+        'from_attributes': True
+    }
