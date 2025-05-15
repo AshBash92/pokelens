@@ -1,6 +1,9 @@
 import os
+from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, sessionmaker, Mapped, mapped_column
+
+load_dotenv()
 
 DB_USER = os.getenv("POSTGRES_USER", "cards")
 DB_PASS = os.getenv("POSTGRES_PASSWORD", "cards")
